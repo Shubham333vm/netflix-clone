@@ -12,6 +12,11 @@ margin:10px;
     display: none;
 }
 
+.row_title{
+    color: white;
+}
+
+
 .row-poster{
 
     object-fit: contain;

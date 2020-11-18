@@ -11,13 +11,13 @@ import Child from './Child'
 // React core to update the state object of a React component.
   
     var [count, setcount] = useState(0);
-
+    console.log("Hooks")
     useEffect(()=>{
-        // This hook lifeCycle method is a combo of -> 1)componentDidMount 2)componentDidUpdate
+        // This hook lifeCycle method is a combo of -> 1)componentDidMount 2)componentDidUpdate 3)componentWillUnmount
         console.log("Functional useEffect and value of count =>" + count)
         document.title="Count Val ="+count
        // setcount(count+=1)
-    },[])
+    },[count])
     //If you set dependencies as an empty array in useEffect then this method will be called only one time you can say it will 
     //behave like componentDidMount
     //If you update anything in useEffect then it will reder again but it will never call useEffect again
